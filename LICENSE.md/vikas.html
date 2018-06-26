@@ -1,0 +1,101 @@
+<html>
+<head>
+<title></title>
+<style>
+body{
+    margin: 0%;
+}
+#maincontainer{
+    width: 1366px;
+    margin: auto;
+
+}
+#form{
+    width: 1000px;
+    margin: auto;
+    
+}
+input , #sel{
+    height: 40px;
+    width: 1000px;
+    
+    font-size: 20px;
+    margin-top: 9px;
+}
+#data{
+    height: 40px;
+    width: 200px;
+    margin: 20px 0 0 200px;
+}
+#logo{
+	float: left;
+    margin-top: 13px; 
+    height: 100px;
+    width: 229px;
+    background-image: url("bel_logo.png"); 
+    background-size: 230px 100px;
+		}
+        #header{
+			width: 1366px;
+			height: 120px;
+			margin: auto;
+			background-color: blue;
+			font-size: 60px;
+		    text-shadow: 4px 3px red;
+			text-align: center;
+			color: white;
+		}
+</style>
+</head>
+<body>
+<div id="maincontainer">
+    <div id="header">
+		<div id="logo"></div>
+		BEL Doctor Report
+		<br /><span style="float:right; font-size:45px;">(KOTDWARA)</span>
+
+	</div>
+	
+    <div id="form">
+            <form>
+                <input type="text" name="patientname" placeholder="Patient Name" required<br />
+                <input type="text" name="fathername" placeholder="Father's Name" required ><br />
+                <input type="text" name="mothername" placeholder="Mother's Name" required><br />
+                <input type="date" name="date" placeholder="Today's Date" required><br />
+                <input type="number" name="mobile" id="mob" placeholder="Mobile Number" required><br />
+                <p id="p1"></p>
+                <select id="sel" required >
+                    <option>Select Event</option>
+                    <option>Dress</option>
+                    <option>Salary</option>
+                    <option>Promotion</option>
+                </select><br />
+                <select id="sel" required>
+                        <option>select Department</option>
+                        <option>M.S.</option>
+                        <option>D.N.D</option>
+                        <option>H.R.D</option>
+                        <option>Acountant</option>
+                        <option>Worker</option>
+                        <option>Security</option>
+                </select>
+                <input id="data" type="submit" value="Submit" onclick="check(this.form)">
+                <input id="data" type="reset" value="Reset" >
+            </form>
+    </div>
+    <div id="footer">
+
+    </div>
+</div>
+<script>
+function check(form){
+    if(form.mobile.value.length != 10){
+        document.getElementById('p1').innerHTML = "Please Enter 10 number only";
+    }
+
+}
+
+</script>
+</body>
+
+</html>
